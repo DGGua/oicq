@@ -44,5 +44,6 @@
     "/lib/**/*.js",
     "/lib/**/*.d.ts",
     "/lib/**/LICENSE"
-  ]
+  ],
+  "bin": "bin/oicq"
 }
