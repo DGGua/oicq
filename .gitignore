@@ -5,8 +5,6 @@ lib/**/*.d.ts
 lib/**/*.js
 !lib/**/protobuf.min.d.ts
 !lib/**/protobuf.min.js
-test/**/*.d.ts
-test/**/*.js
 *.js.map
 !test/**/protobuf.min.d.ts
 !test/**/protobuf.min.js
