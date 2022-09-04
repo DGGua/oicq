@@ -1,11 +1,11 @@
 "use strict";
+import { startup } from "./core";
 const path = require("path");
 const fs = require("fs");
 const os = require("os");
 
 const dir = path.join(os.homedir(), ".oicq");
-if (!fs.existsSync(dir))
-    fs.mkdirSync(dir);
+if (!fs.existsSync(dir)) fs.mkdirSync(dir);
 
 const confpath = path.join(dir, "config.js");
 if (!fs.existsSync(confpath)) {
@@ -33,11 +33,14 @@ if (account > 10000 && account < 0xffffffff) {
   *******************************************************************
 `);
     const config = require(confpath);
-    require("./core")(account, Object.assign(config.general, config[account]));
+    console.log(config)
+    console.log(config[account])
+    startup(account, Object.assign(config.general, config[account]));
+
 } else {
     console.log(help);
 }
 
 process.on("unhandledRejection", (a) => {
-  console.log(a)
-})
+    console.log(a);
+});
