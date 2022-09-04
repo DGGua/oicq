@@ -45,5 +45,7 @@
     "/lib/**/*.d.ts",
     "/lib/**/LICENSE"
   ],
-  "bin": "bin/oicq"
+  "bin": {
+    "oicq":"bin/oicq"
+  }
 }
